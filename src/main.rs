@@ -1,6 +1,6 @@
 use sdl2::messagebox::{
-    show_message_box, ButtonData, ClickedButton, MessageBoxButtonFlag,
-    MessageBoxColorScheme, MessageBoxFlag,
+    show_message_box, ButtonData, ClickedButton, MessageBoxButtonFlag, MessageBoxColorScheme,
+    MessageBoxFlag,
 };
 
 #[must_use]
@@ -47,7 +47,14 @@ fn main() {
         .position_centered()
         .build()
         .unwrap();
-    if confer_with_user(MessageBoxFlag::WARNING, "Are You Sure?", "Are you sure you want this dialog to look like this?", &window, "Cancel", "Confirm") {
+    if confer_with_user(
+        MessageBoxFlag::WARNING,
+        "Are You Sure?",
+        "Are you sure you want this dialog to look like this?",
+        &window,
+        "Cancel",
+        "Confirm",
+    ) {
         println!("User hit Confirm.");
     } else {
         println!("User hit Cancel.");
